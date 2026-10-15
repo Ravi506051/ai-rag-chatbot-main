@@ -137,5 +137,30 @@ You can easily switch to OpenAI or other providers by updating the `llm_response
 - Add upload history & query logging
 - Improve document retrieval using hybrid or semantic search methods
 - Add voice input/output and chat history persistence
+- 
+
+## 📈 Future Improvements
+
+- Integrate a real Large Language Model (LLM) for improved answer generation
+- Add a user-friendly web interface for document uploads and chat
+- Improve document retrieval using hybrid search and reranking
+- Add source citations so users can verify answers against original documents
+- Evaluate retrieval quality and answer correctness using suitable metrics
+
+## 🧪 Testing and Evaluation
+
+Test the chatbot with different supported document types and questions. Verify that retrieved passages are relevant and that generated answers are consistent with the source documents.
+
+## ⚠️ Limitations
+
+- Answer quality depends on document parsing and retrieval accuracy.
+- Generated responses should be verified against the original documents.
+- MockLLM mode is intended for demonstration and does not provide the capabilities of a production LLM.
+
+## 👨‍💻 Maintainer
+
+Ravi Kumar Rao
+
+GitHub: https://github.com/Ravi506051
 
       
