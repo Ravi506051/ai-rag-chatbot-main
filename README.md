@@ -163,4 +163,10 @@ Ravi Kumar Rao
 
 GitHub: https://github.com/Ravi506051
 
-      
+## Retrieval and Answer Quality Checks
+
+Test ingestion separately for each supported file type and include documents with tables, long passages, and unusual formatting. For each test question, inspect the retrieved passages and verify that the generated answer is supported by them. Include questions with no answer in the source and ensure the system can state that the information was not found.
+
+## Extension Ideas
+
+Useful next steps include adding source references to answers, testing retrieval precision on a small question set, and replacing the mock response component only after documenting the chosen model and its configuration. Do not describe mock responses as production LLM output.
