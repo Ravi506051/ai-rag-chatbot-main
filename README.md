@@ -170,3 +170,9 @@ Test ingestion separately for each supported file type and include documents wit
 ## Extension Ideas
 
 Useful next steps include adding source references to answers, testing retrieval precision on a small question set, and replacing the mock response component only after documenting the chosen model and its configuration. Do not describe mock responses as production LLM output.
+
+## Project Development Notes
+
+Test each file parser independently and inspect retrieved chunks before trusting an answer. Clearly distinguish mock response generation from a real LLM integration.
+
+For reproducible updates, record the dataset or upstream version, environment and dependency versions, configuration, and actual outputs from each run. Keep illustrative examples clearly labelled and never commit credentials or private data.
