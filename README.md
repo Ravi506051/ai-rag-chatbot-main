@@ -190,3 +190,11 @@ Suggested engineering checks: include malformed and empty files in parser tests,
 - Test supported file types with empty files, malformed documents, long documents, and documents containing tables.
 - Measure retrieval relevance and answer faithfulness on a fixed document-question set; verify answers against source passages.
 - Before adding a live LLM, document provider configuration, protect API keys, and handle rate limits and provider errors safely.
+
+## RAG Pipeline Engineering
+
+- Separate document ingestion, text normalization, chunking, embedding, vector retrieval, and answer generation.
+- Store metadata with each chunk to support source attribution, filtering, and traceable responses.
+- Tune chunk size, overlap, retrieval count, and similarity thresholds using a repeatable evaluation set.
+- Measure retrieval relevance and answer faithfulness independently rather than relying only on fluent responses.
+- Protect API keys and avoid logging private document contents unnecessarily.
