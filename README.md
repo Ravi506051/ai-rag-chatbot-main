@@ -198,3 +198,10 @@ Suggested engineering checks: include malformed and empty files in parser tests,
 - Tune chunk size, overlap, retrieval count, and similarity thresholds using a repeatable evaluation set.
 - Measure retrieval relevance and answer faithfulness independently rather than relying only on fluent responses.
 - Protect API keys and avoid logging private document contents unnecessarily.
+
+## RAG Pipeline Verification
+
+- Test ingestion, parsing, chunking, embedding, retrieval, and response generation as separate stages.
+- Include malformed files, empty documents, unsupported formats, and very large documents in the test set.
+- Evaluate retrieval relevance independently from answer quality and avoid answering when retrieved context does not support a claim.
+- Document the actual parser and embedding model used; keep sample documents free of personal or confidential information.
