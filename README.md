@@ -36,3 +36,16 @@ Add persistent vector storage, source references, configurable embedding models 
 
 ## Maintainer
 **Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
+
+## Skills Demonstrated
+
+- Document parsing
+- text chunking
+- embedding generation
+- semantic retrieval
+- grounded question answering
+- modular NLP pipelines.
+
+## Portfolio Context
+
+This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
