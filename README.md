@@ -1,51 +1,46 @@
 # AI RAG Chatbot
 
-A modular document-question-answering project that demonstrates how ingestion, retrieval, query handling and response generation can be separated into distinct components.
+A modular document-question-answering project demonstrating how document ingestion, text processing, semantic retrieval, and response generation work together in a Retrieval-Augmented Generation (RAG) pipeline.
 
-## Supported document types
-The original project documentation lists PDF, DOCX, PPTX, CSV and TXT inputs. Confirm parser availability for each format in the current source code.
+## Supported Inputs
+The project documentation lists PDF, DOCX, PPTX, CSV, and TXT files. Availability depends on the parsers configured in the current source code.
 
-## Core workflow
-1. Ingest and parse a document.
-2. Normalize extracted content into text chunks.
-3. Generate vector embeddings.
-4. Retrieve relevant content for a user query.
-5. Pass the retrieved context to the response-generation component.
-6. Return an answer through the command-line interface.
+## Architecture
+```text
+Documents → Parsing → Text Cleaning → Chunking
+          → Embeddings → Vector Retrieval
+          → Context Assembly → Answer Generation
+```
+
+## Core Features
+- Document ingestion and text extraction.
+- Text chunking for retrieval.
+- Embedding generation with Sentence Transformers.
+- Semantic retrieval of relevant passages.
+- Context-grounded response generation.
+- Mock LLM option for local workflow testing, as described by the project.
 
 ## Technology
-Python · Hugging Face Sentence Transformers · Embeddings · Retrieval-Augmented Generation
-
-The repository documentation describes a mock LLM option for local workflow testing without a provider API key.
+Python · Hugging Face Sentence Transformers · Embeddings · RAG · NLP
 
 ## Setup
 ```bash
 git clone https://github.com/Ravi506051/ai-rag-chatbot-main.git
 cd ai-rag-chatbot-main
 python -m venv .venv
-# Windows: .venv\\Scripts\\activate
+# Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
-Run the entry point documented in the repository after installing dependencies.
+Run the entry point documented in the repository after installing its dependencies.
 
-## Engineering notes
-Keep ingestion and retrieval independently testable. Evaluate retrieval relevance separately from answer quality, handle unsupported questions gracefully, and avoid exposing private document text in logs.
+## Evaluation
+Evaluate retrieval quality separately from answer quality. Useful checks include retrieval relevance, answer faithfulness, response latency, and behaviour when the documents do not contain the answer.
 
-## Future improvements
-Add persistent vector storage, source references, configurable embedding models and automated tests for different file types.
+## Future Improvements
+- Add persistent vector storage and source-level citations.
+- Add automated tests for supported file formats.
+- Compare embedding models and chunking strategies.
+- Add document access controls and privacy-aware logging.
 
 ## Maintainer
 **Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
-
-## Skills Demonstrated
-
-- Document parsing
-- text chunking
-- embedding generation
-- semantic retrieval
-- grounded question answering
-- modular NLP pipelines.
-
-## Portfolio Context
-
-This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
