@@ -62,3 +62,10 @@ A useful RAG evaluation should inspect the retrieved passages before judging the
 - Preserve document metadata and source references through chunking and retrieval.
 - Treat uploaded documents as untrusted input and do not allow their contents to override application instructions.
 - Add tests for empty retrieval results, malformed files, duplicate uploads, and unsupported questions.
+
+## Operational Testing
+
+- Test document ingestion, indexing, retrieval, and answer generation as separate stages.
+- Confirm that re-uploaded or removed documents do not leave stale search results.
+- Enforce file-size and file-type limits, and handle parser and embedding-service failures.
+- Keep credentials in environment variables and avoid logging private document contents.
