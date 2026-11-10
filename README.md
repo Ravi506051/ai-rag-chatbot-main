@@ -55,3 +55,10 @@ A useful RAG evaluation should inspect the retrieved passages before judging the
 - Keep chunk size, overlap, embedding model, and top-k retrieval configurable.
 - Show the evidence used to produce an answer so users can verify it.
 - Treat uploaded documents as untrusted input and avoid exposing secrets in prompts or logs.
+
+## Production Readiness Checklist
+
+- Track retrieval relevance separately from answer quality; a fluent response can still be unsupported.
+- Preserve document metadata and source references through chunking and retrieval.
+- Treat uploaded documents as untrusted input and do not allow their contents to override application instructions.
+- Add tests for empty retrieval results, malformed files, duplicate uploads, and unsupported questions.
