@@ -44,3 +44,14 @@ Evaluate retrieval quality separately from answer quality. Useful checks include
 
 ## Maintainer
 **Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
+
+## Retrieval Quality and Grounded Answers
+
+A useful RAG evaluation should inspect the retrieved passages before judging the generated answer. Test questions whose answers are present, partially present, and absent from the uploaded documents. Track retrieval relevance, answer faithfulness, latency, and whether the system clearly says when the source material does not contain an answer.
+
+## Design Considerations
+
+- Preserve document and page metadata through parsing and chunking.
+- Keep chunk size, overlap, embedding model, and top-k retrieval configurable.
+- Show the evidence used to produce an answer so users can verify it.
+- Treat uploaded documents as untrusted input and avoid exposing secrets in prompts or logs.
